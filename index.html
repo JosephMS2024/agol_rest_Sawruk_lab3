@@ -203,14 +203,16 @@
         layer: myAirports
       }
 
-        // Begin Editor constructor
+      // Begin Editor constructor
       const editor = new Editor({
         view: view,
         layerInfos: [pointInfos]
       }); // End Editor constructor
-        
+           
       // Add the widget to the view
-      view.ui.add(editor, "top-right"); 
+      view.ui.add(editor, {
+        position: "top-right"
+      }); 
       
       const airportRenderer = {
         "type": "simple",
