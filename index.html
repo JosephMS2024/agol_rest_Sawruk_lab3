@@ -188,7 +188,15 @@
         popupTemplate: popupAKAIRPORT
       });
       map.add(AKAPTLayer);
-
+      
+      const myAirports = new FeatureLayer({
+        url: "https://services.arcgis.com/HRPe58bUyBqyyiCt/arcgis/rest/services/My_Airports_Sawwruk/FeatureServer",
+ 
+        //adding the popup here
+        outFields: ["AirportCode"],
+      });
+        //adding the feature layer to the map
+      map.add(myAirports);
       
       const airportRenderer = {
         "type": "simple",
