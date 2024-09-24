@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hello AGOL...Lab 3!</title>
+  <title>Hello AGOL...Lab 4!</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
@@ -189,31 +189,7 @@
         popupTemplate: popupAKAIRPORT
       });
       map.add(AKAPTLayer);
-      
-      const myAirports = new FeatureLayer({
-        url: "https://services.arcgis.com/HRPe58bUyBqyyiCt/arcgis/rest/services/My_Airports_Sawwruk/FeatureServer",
- 
-        //adding the popup here
-        outFields: ["AirportCode"],
-      });
-        //adding the feature layer to the map
-      map.add(myAirports);
-              
-      const pointInfos = {
-        layer: myAirports
-      }
-
-      // Begin Editor constructor
-      const editor = new Editor({
-        view: view,
-        layerInfos: [pointInfos]
-      }); // End Editor constructor
-           
-      // Add the widget to the view
-      view.ui.add(editor, {
-        position: "top-right"
-      }); 
-      
+               
       const airportRenderer = {
         "type": "simple",
         "symbol": {
